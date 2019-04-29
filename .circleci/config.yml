@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/rust:1.31
+    working_directory: ~/repo  
+    steps:
+      - checkout
+      - run:
+          name: Run cargo build for rustls
+	  command: cargo build --verbose
