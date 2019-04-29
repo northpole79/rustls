@@ -13,3 +13,6 @@ jobs:
       - run:
           name: Run cargo build for rustls
           command: cargo build --verbose
+      - run:
+          name: Run cargo test for rustls
+          command: cargo test --verbose
