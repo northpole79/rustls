@@ -3,7 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/rust:1.31
-    working_directory: ~/repo  
+    working_directory: ~/repo
+    branches:
+      only:
+        - /dev\/*/
     steps:
       - checkout
       - run:
