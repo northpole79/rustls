@@ -11,12 +11,12 @@ repository = "https://github.com/ctz/rustls"
 categories = ["network-programming", "cryptography"]
 
 [dependencies]
-base64 = "0.10"
-log = { version = "0.4.0", optional = true }
-ring = "0.14"
-sct = "0.5"
-untrusted = "0.6.2"
-webpki = "0.19"
+base64 = { path = "./extdeps/base64-0.10.1" }
+log = { path = "./extdeps/log-0.4.6", version = "0.4.6", optional = true }
+ring = { path = "./extdeps/ring-0.14.6" } # "0.14.6"
+sct = { path = "./extdeps/sct-0.5.0" } #"0.5.0"
+untrusted = { path = "./extdeps/untrusted-0.6.2" }
+webpki = { path = "./extdeps/webpki-0.19.1" }
 
 [features]
 default = ["logging"]
@@ -25,11 +25,11 @@ dangerous_configuration = []
 quic = []
 
 [dev-dependencies]
-env_logger = "0.6.1"
-log = "0.4.0"
-tempfile = "3.0"
-webpki-roots = "0.16"
-criterion = "0.2"
+#env_logger = "0.6.1"
+#log = "0.4.0"
+#tempfile = "3.0"
+#webpki-roots = "0.16"
+#criterion = "0.2"
 
 [[example]]
 name = "bogo_shim"
